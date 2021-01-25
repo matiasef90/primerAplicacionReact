@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+.App-Nabvar{
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 90%;
+}
+ul li{
+  color: white;
+  display: block;
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+
+ul li:hover{
+  text-shadow: #ccc 0px 0x 2px;
+}
+
+
+ul li ul{
+  list-style: none;
+  display: none;
+}
+
+ul li:hover ul{
+  display: block;
+}
+
+ul li ul li{
+  font-size: 1rem;
+}
