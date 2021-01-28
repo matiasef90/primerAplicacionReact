@@ -1,12 +1,14 @@
 import './App.css';
-import Nabvar from './components/Nabvar';
+import ButtonComponent from './components/button.jsx';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Nabvar />
+        <Navbar />
       </header>
+      <ButtonComponent />
     </div>
   );
 }

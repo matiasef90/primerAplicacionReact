@@ -1,0 +1,36 @@
+.Navbar{
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    border: 3px solid black;
+    justify-content: space-around;
+}
+
+.Navbar li{
+    font-size: 1rem;
+    padding: 1em;
+}
+
+.Navbar li:hover{
+    background-color: grey;
+    color: white;
+}
+
+.Drop-menu{
+    display: none;
+}
+
+li:hover > .Drop-menu{
+    display: flex;
+    flex-flow: column;
+}
+
+li > .Drop-menu{
+    list-style: none;
+    color: gray;
+    display: none;
+    position: absolute;
+    top: 56px
+}
+
