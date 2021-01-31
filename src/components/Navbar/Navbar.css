@@ -31,6 +31,7 @@ li > .Drop-menu{
     color: gray;
     display: none;
     position: absolute;
-    top: 56px
+    top: 56px;
+    right: 450px;
 }
 

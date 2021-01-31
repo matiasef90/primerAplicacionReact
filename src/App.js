@@ -1,5 +1,5 @@
 import './App.css';
-import ButtonComponent from './components/button.jsx';
+import ItemListContainer from './components/containers/itemsListContainer';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -8,8 +8,10 @@ function App() {
       <header className="App-header">
         <Navbar />
       </header>
-      <ButtonComponent />
+      <ItemListContainer greeting = 'Hola a todos'/>
     </div>
+
+
   );
 }
 
