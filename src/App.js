@@ -9,8 +9,7 @@ function App() {
       <header className="App-header">
         <Navbar />
       </header>
-      <ItemListContainer greeting = 'Hola a todos'/>
-      <ItemCount stock = {12}/>
+      <ItemListContainer />
     </div>
   );
 }

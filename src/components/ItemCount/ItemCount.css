@@ -1,7 +1,7 @@
 .ItemCount{
     background-color:white;
     display: flex;
-    flex-direction: raw;
+    flex-direction: column;
     width: 100px;
     justify-content: space-evenly;
     margin-left: 3em;
@@ -10,4 +10,9 @@
 .button{
     font-size: 1.2rem;
     color: gray;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
 }
