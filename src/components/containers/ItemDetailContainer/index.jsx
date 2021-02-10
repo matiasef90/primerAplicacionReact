@@ -1,10 +1,19 @@
 import React from 'react';
 import Producto from '../../../mocks/producto';
+import ItemCount from '../../ItemCount';
 import { ItemDetail } from '../../ItemDetail';
 
 export const ItemDetailContainer = () => {
 
     const [producto, getProducto] = React.useState([]);
+
+    const onAdd = ( producto,  cantidad , stock) => {
+        return ( ) =>{
+           if (cantidad <= stock ) {
+           /* dejar vacio por ahora */
+          }
+        }
+     }
     
     React.useEffect(() =>{
         const myPromise = new Promise((resolve) =>{
@@ -16,5 +25,6 @@ export const ItemDetailContainer = () => {
 
     return <>
         <ItemDetail item = {producto} />
+        <ItemCount initial = {1} stock = {5} onAdd = {onAdd} />
     </>
 };
