@@ -2,8 +2,10 @@ import React, {useState} from 'react';
 import ItemCount from '../../ItemCount';
 import listaProductos from '../../../mocks/listaProductos';
 import { ItemList } from '../../ItemList';
+import { useParams } from 'react-router-dom';
 const ItemListContainer = () =>{
 
+    const {categoria} = useParams();
     const [productos, setProductos] = useState([]);
 
     React.useEffect(()=>{
@@ -11,13 +13,20 @@ const ItemListContainer = () =>{
                 setTimeout(() => resolve(listaProductos),3000)
             });
         
-            myPromise.then((mensaje)=> setProductos(mensaje));
-
-    },[]);
-    
+            myPromise.then((mensaje)=> {
+                if(categoria){
+                    setProductos(mensaje.filter(e => e.categoria === categoria));
+                }else{
+                    setProductos(mensaje)
+                }
+            }
+            );
+            
+        }, [categoria]);
+        
     return(
             <>
-                <ItemList productos = {productos} />
+                <ItemList productos = {productos}/>
             </>
         )
 };

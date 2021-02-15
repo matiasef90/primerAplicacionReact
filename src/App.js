@@ -4,7 +4,8 @@ import { ItemDetailContainer } from './components/containers/ItemDetailContainer
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 import Navbar from './components/Navbar';
-import { Home } from './components/containers/Home';
+import { ItemDetail } from './components/ItemDetail';
+
 
 function App() {
   return (
@@ -13,14 +14,17 @@ function App() {
         </header>
       <Navbar />
       <Switch>
-        <Route exact path ='/'>
-          <Home/>
-        </Route>
-        <Route path = '/ItemlistContainer'>
+        <Route exact path = '/'>
           <ItemListContainer />
         </Route>
-        <Route path = '/ItemDetailContainer'>
-        <ItemDetailContainer/>
+        <Route path = '/ItemListContainer'>
+          <ItemListContainer/>
+        </Route> 
+        <Route path = '/:categoria'>
+          <ItemListContainer/>
+        </Route> 
+        <Route path = '/ItemDetailContainer/:id'>
+          <ItemDetailContainer />
         </Route> 
       </Switch>
     </BrowserRouter>

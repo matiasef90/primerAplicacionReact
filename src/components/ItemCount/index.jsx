@@ -6,22 +6,20 @@ import './ItemCount.css';
 const ItemCount = ({stock, initial ,onAdd}) =>{
 
     const [contador, getContador] = useState(initial);
-
-
-        const sumar = () =>{
-            if(contador < stock){
-                getContador(contador + 1);
-            }
-        };
-        const restar = () => {
-            if(contador > 1){
-                getContador(contador - 1);
-            }
-        }
     
-  
-    return<>
-    <div className = 'ItemCount'>
+    const sumar = () =>{
+        if(contador < stock){
+           return getContador(contador + 1);
+        }
+    };
+    const restar = () => {
+        if(contador > 1){
+            return  getContador(contador - 1);
+        }
+    }
+     
+
+    return <div className = 'ItemCount'>
         <div className = 'container'>
         <button className = 'button' onClick = {() => restar()}>-</button>
         <p>{contador}</p>
@@ -31,7 +29,7 @@ const ItemCount = ({stock, initial ,onAdd}) =>{
             <button className = 'button' onClick = {() => onAdd()}>Comprar</button>
         </div>
     </div>
-    </>
+    
 }
 
 

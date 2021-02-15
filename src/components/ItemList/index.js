@@ -3,6 +3,10 @@ import Item from '../Item';
 
 export const ItemList = ({productos}) => {
     return <>
-        {productos.map((producto) => {return  <Item key={producto.id} name = {producto.name} price ={producto.price} stock = {producto.stock} />})}
+        {
+            productos.map((item) =>{
+                return  <Item key = {item.id} itemId = {item.id} name = {item.name} price ={item.price} stock = {item.stock}/>
+            })
+        }
     </>
 }

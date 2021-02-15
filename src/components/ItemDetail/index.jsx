@@ -1,5 +1,9 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import './ItemDetail.css';
+import '../../mocks/listaProductos';
+
+const {id} = useParams;
 
 export const ItemDetail = ({item}) => {
     return <div className = 'ItemDetail'>

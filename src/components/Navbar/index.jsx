@@ -1,27 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Carrito from '../cardWidget';
 import './Navbar.css';
 
 const Nabvar = () => {
 
     return (
+    
     <ul className = "Navbar">
-        <li>Tienda Libros</li>
-        <li>Ultimos Lanzamientos</li>
-        <li>Ofertas de la Semana</li>
-        <li>Categorias
-            <ul className = "Drop-menu">
-                <li>Novela Negra</li>
-                <li>Terror</li>
-                <li>Fantasia</li>
-                <li>Suspenso</li>
-                <li>Ciencia Ficcion</li>
-                <li>Desarrollo Personal</li>
-            </ul>
+        <li>
+            <Link to='/'>Home</Link>
         </li>
         <li>
-            <input type="text"/>
-            <button>Buscar</button>
+            <Link to='/Fantasia'>Fantasia</Link>
+        </li>
+        <li>
+            <Link to='/Ciencia Ficción'>Ciencia Ficción</Link>
+        </li>
+        <li>
+            <Link to='/Horror'>Horror</Link>
         </li>
         <li>
             <Carrito />
