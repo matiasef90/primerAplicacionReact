@@ -12,13 +12,13 @@ const Nabvar = () => {
             <Link to='/'>Home</Link>
         </li>
         <li>
-            <Link to='/Fantasia'>Fantasia</Link>
+            <Link to='/categorias/Fantasia'>Fantasia</Link>
         </li>
         <li>
-            <Link to='/Ciencia Ficción'>Ciencia Ficción</Link>
+            <Link to='/categorias/Ciencia Ficción'>Ciencia Ficción</Link>
         </li>
         <li>
-            <Link to='/Horror'>Horror</Link>
+            <Link to='/categorias/Horror'>Horror</Link>
         </li>
         <li>
             <Carrito />

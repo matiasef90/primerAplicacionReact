@@ -7,6 +7,7 @@ const ItemListContainer = () =>{
 
     const {categoria} = useParams();
     const [productos, setProductos] = useState([]);
+    console.log(categoria);
 
     React.useEffect(()=>{
             const myPromise = new Promise((resolve) => {

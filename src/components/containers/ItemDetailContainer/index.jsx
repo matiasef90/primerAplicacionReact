@@ -27,7 +27,7 @@ export const ItemDetailContainer = () => {
         });
         
         myPromise.then((result) => {
-            getProducto(result.find(e => e.id === id))
+            getProducto(result.find(e => e.id == id))
             console.log(id);
         });
     },[]);

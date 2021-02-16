@@ -4,12 +4,13 @@ import ItemCount from '../ItemCount';
 import './Item.css';
 
 const Item = ({name, price, stock, itemId}) =>{
+    console.log(itemId);
 
     return <div className= 'card'>
         <h3>{name}</h3>
         <p>Precio: {price}</p>
         <p>Stock: {stock}</p>
-        <NavLink to = {`ItemDetailContainer`}>Ver mas</NavLink>
+        <NavLink to = {`/producto/${itemId}`}>Ver mas</NavLink>
     </div>
 }
 
