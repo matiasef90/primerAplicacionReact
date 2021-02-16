@@ -5,6 +5,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import { ItemDetail } from './components/ItemDetail';
+import Cart from './components/cart';
 
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
         </Route>  
         <Route path = '/producto/:id'>
           <ItemDetailContainer />
+        </Route> 
+        <Route path = '/cart'>
+          <Cart />
         </Route> 
       </Switch>
     </BrowserRouter>

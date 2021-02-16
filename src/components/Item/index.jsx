@@ -4,7 +4,6 @@ import ItemCount from '../ItemCount';
 import './Item.css';
 
 const Item = ({name, price, stock, itemId}) =>{
-    console.log(itemId);
 
     return <div className= 'card'>
         <h3>{name}</h3>
