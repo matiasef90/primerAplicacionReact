@@ -21,7 +21,7 @@ const Nabvar = () => {
             <Link to='/categorias/Horror'>Horror</Link>
         </li>
         <li>
-            <Carrito />
+            <Carrito to = '/cart'/>
         </li>
     </ul>
     )

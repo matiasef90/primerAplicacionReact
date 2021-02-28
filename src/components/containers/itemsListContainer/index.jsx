@@ -10,7 +10,7 @@ const ItemListContainer = () =>{
 
     React.useEffect(()=>{
             const myPromise = new Promise((resolve) => {
-                setTimeout(() => resolve(listaProductos),3000)
+                setTimeout(() => resolve(listaProductos),500)
             });
         
             myPromise.then((mensaje)=> {
