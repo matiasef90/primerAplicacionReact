@@ -1,4 +1,5 @@
-import { createContext, useState} from "react";
+import { createContext, useEffect, useState} from "react";
+import { getFirestore } from "../../firebase";
 
 
 export const CartContext = createContext([]);
@@ -8,6 +9,17 @@ export const CartContext = createContext([]);
 export const CartContextProvider = ({children}) => {
  
     const [product, setProduct] = useState([]);
+    const [books, setBooks] = useState();
+
+    useEffect(() =>{
+        const db = getFirestore();
+        const itemCollection = db.collection("Books");
+        itemCollection.get().then((value) =>{
+            console.log(value);
+            setBooks(value);
+
+        })
+    },[])
 
     const addItem = (item, quantity) => {
         if(isInCart(item.id, quantity)){

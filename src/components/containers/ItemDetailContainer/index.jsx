@@ -23,7 +23,7 @@ export const ItemDetailContainer = () => {
     
     React.useEffect(() =>{
         const myPromise = new Promise((resolve) =>{
-            setTimeout(() => resolve(productos),2000);
+            setTimeout(() => resolve(productos),500);
         });
         
         myPromise.then((result) => {
