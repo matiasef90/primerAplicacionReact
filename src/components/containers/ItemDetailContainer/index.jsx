@@ -1,38 +1,23 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import productos from '../../../mocks/listaProductos';
-import ItemCount from '../../ItemCount';
+import { CartContext } from '../../../contexts/CartContext';
 import { ItemDetail } from '../../ItemDetail';
 
 export const ItemDetailContainer = () => {
 
-    
+    const {books} = useContext(CartContext);    
     const {id} = useParams();
     
-    const [producto, getProducto] = React.useState([]);
-    console.log('Este es el id: ' + id);
-    
-    const onAdd = ( producto,  cantidad , stock) => {
-        return ( ) =>{
-            if (cantidad <= stock ) {
-                /* dejar vacio por ahora */
-            }
-        }
-    }
-    console.log('estas en item detail container');
+    const [product, getProduct] = useState([]);
     
     React.useEffect(() =>{
-        const myPromise = new Promise((resolve) =>{
-            setTimeout(() => resolve(productos),500);
-        });
         
-        myPromise.then((result) => {
-            getProducto(result.find(e => e.id == id))
-            console.log(id);
-        });
-    },[]);
+        console.log(books);
+            getProduct(books.find(e => e.id === id))
+    
+    },[books]);
     
     return <>
-        <ItemDetail item = {producto} />
+        <ItemDetail item = {product} />
     </>
 };
