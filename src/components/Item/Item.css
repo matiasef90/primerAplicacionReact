@@ -1,3 +1,4 @@
+
 .card{
     border: 2px solid gray;
     border-radius: 5px;
@@ -10,4 +11,8 @@
 .card h3, p{
     text-transform: capitalize;
     text-align: center;
+}
+
+.card img{
+    width: 100%;
 }

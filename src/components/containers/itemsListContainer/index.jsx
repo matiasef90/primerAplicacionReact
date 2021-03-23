@@ -1,6 +1,4 @@
 import React, {useContext, useState} from 'react';
-import ItemCount from '../../ItemCount';
-import listaProductos from '../../../mocks/listaProductos';
 import { ItemList } from '../../ItemList';
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../../../contexts/CartContext';

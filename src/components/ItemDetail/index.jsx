@@ -8,13 +8,14 @@ import { CartContext } from "../../contexts/CartContext"
 
 export const ItemDetail = ({item}) => {
 
-    const{ addItem} = useContext(CartContext);
+    const{addItem} = useContext(CartContext);
 
     
     const [comprar, setComprar] = useState(false);
     const [unidades, setUnidades] = useState(0);
 
     const onAdd = (contador) => {
+        console.log("Compra realizada");
         addItem(item, contador);
         setUnidades(contador);
         setComprar(true);

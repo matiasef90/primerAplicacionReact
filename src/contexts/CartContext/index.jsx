@@ -10,6 +10,7 @@ export const CartContextProvider = ({children}) => {
  
     const [product, setProduct] = useState([]);
     const [books, setBooks] = useState([]);
+    const [charge, setCharge] = useState(false);
 
     useEffect(() =>{
         const db = getFirestore();
@@ -22,7 +23,8 @@ export const CartContextProvider = ({children}) => {
             let aux = await Promise.all(value.docs.map(async product => {
                 const categorieCollection = db.collection("categories");
                 let auxCategory= await categorieCollection.doc(product.data().idCategory).get();
-                return {...product.data(), id:product.id, category: auxCategory.data().category}
+                setCharge(true);
+                return {...product.data(), id:product.id, category: auxCategory.data().category};
             }));
             setBooks(aux);
             
@@ -30,7 +32,7 @@ export const CartContextProvider = ({children}) => {
             console.log("Error items", error);
         });
 
-    },);
+    },[charge]);
 
     const addItem = (item, quantity) => {
         if(isInCart(item.id, quantity)){

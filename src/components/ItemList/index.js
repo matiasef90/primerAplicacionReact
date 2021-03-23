@@ -5,7 +5,7 @@ export const ItemList = ({productos}) => {
     return <>
         {
             productos.map((item) =>{
-                return  <Item key = {item.id} itemId = {item.id} name = {item.title} price ={item.price} stock = {item.stock}/>
+                return  <Item key = {item.id} itemId = {item.id} name = {item.title} price ={item.price} stock = {item.stock} img = {item.img}/>
             })
         }
     </>

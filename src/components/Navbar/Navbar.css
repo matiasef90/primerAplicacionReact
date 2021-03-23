@@ -10,6 +10,7 @@
 .Navbar li{
     font-size: 1rem;
     padding: 1em;
+    text-decoration: none;
 }
 
 .Navbar li:hover{
